@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills — Zakiyatun Surya</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-hero {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 4rem 2rem 3rem;
+    }
+    .page-hero h1 { margin-bottom: 0.8rem; }
+    .page-hero p { max-width: 520px; }
+
+    .skills-section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem 5rem;
+    }
+
+    .skill-group {
+      margin-bottom: 3rem;
+    }
+    .skill-group-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+    }
+    .skill-group-icon { font-size: 1.4rem; }
+    .skill-group-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+    }
+    .skill-group-desc { font-size: 0.84rem; color: var(--muted); }
+
+    .skill-bars { display: flex; flex-direction: column; gap: 0.9rem; }
+    .skill-row { display: flex; flex-direction: column; gap: 0.3rem; }
+    .skill-row-top {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.83rem;
+    }
+    .skill-name { font-weight: 500; }
+    .skill-level { color: var(--muted); font-size: 0.76rem; }
+    .bar-track {
+      height: 5px;
+      background: var(--card2);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 10px;
+      background: linear-gradient(90deg, var(--lavender), var(--pink));
+      width: 0;
+      transition: width 1s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .bar-fill.mint {
+      background: linear-gradient(90deg, var(--mint), var(--lavender));
+    }
+    .bar-fill.peach {
+      background: linear-gradient(90deg, #FFC9A0, var(--pink));
+    }
+
+    /* tag clouds */
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.6rem;
+    }
+
+    .groups-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .group-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.6rem;
+    }
+
+    @media (max-width: 640px) {
+      .groups-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body data-page="skills">
+<script src="nav.js"></script>
+
+<main class="page">
+  <div class="page-hero">
+    <div class="section-label">Capabilities</div>
+    <h1>What's in my <span class="grad">toolkit</span></h1>
+    <p>From scripting data pipelines to presenting board-ready dashboards — here's how I operate and what I operate with.</p>
+  </div>
+
+  <div class="skills-section">
+
+    <!-- Core technical skills with bars -->
+    <div class="skill-group">
+      <div class="skill-group-header">
+        <span class="skill-group-icon">🐍</span>
+        <div>
+          <div class="skill-group-title">Programming & Scripting</div>
+          <div class="skill-group-desc">Languages I write in regularly</div>
+        </div>
+      </div>
+      <div class="skill-bars">
+        <div class="skill-row">
+          <div class="skill-row-top"><span class="skill-name">Python (NumPy, Pandas, Scikit-learn, TF/Keras)</span><span class="skill-level">Advanced</span></div>
+          <div class="bar-track"><div class="bar-fill" data-w="90"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-row-top"><span class="skill-name">Google Apps Script</span><span class="skill-level">Advanced</span></div>
+          <div class="bar-track"><div class="bar-fill" data-w="88"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-row-top"><span class="skill-name">SQL</span><span class="skill-level">Intermediate-Advanced</span></div>
+          <div class="bar-track"><div class="bar-fill" data-w="80"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-row-top"><span class="skill-name">R</span><span class="skill-level">Intermediate</span></div>
+          <div class="bar-track"><div class="bar-fill" data-w="70"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <br>
+
+    <!-- Data science -->
+    <div class="skill-group">
+      <div class="skill-group-header">
+        <span class="skill-group-icon">📈</span>
+        <div>
+          <div class="skill-group-title">Data Science & Analytics</div>
+          <div class="skill-group-desc">Turning raw data into reliable insights</div>
+        </div>
+      </div>
+      <div class="skill-bars">
+        <div class="skill-row">
+          <div class="skill-row-top"><span class="skill-name">ETL & Data Pipeline Design</span><span class="skill-level">Advanced</span></div>
+          <div class="bar-track"><div class="bar-fill mint" data-w="88"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-row-top"><span class="skill-name">Predictive Analytics & Time Series</span><span class="skill-level">Intermediate-Advanced</span></div>
+          <div class="bar-track"><div class="bar-fill mint" data-w="78"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-row-top"><span class="skill-name">A/B Testing & Statistics</span><span class="skill-level">Intermediate</span></div>
+          <div class="bar-track"><div class="bar-fill mint" data-w="72"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-row-top"><span class="skill-name">Machine Learning (Classification, Clustering, Rec. Systems)</span><span class="skill-level">Intermediate</span></div>
+          <div class="bar-track"><div class="bar-fill mint" data-w="75"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <br>
+
+    <!-- BI -->
+    <div class="skill-group">
+      <div class="skill-group-header">
+        <span class="skill-group-icon">🎨</span>
+        <div>
+          <div class="skill-group-title">Data Visualization & BI</div>
+          <div class="skill-group-desc">Making data readable for everyone</div>
+        </div>
+      </div>
+      <div class="skill-bars">
+        <div class="skill-row">
+          <div class="skill-row-top"><span class="skill-name">Tableau</span><span class="skill-level">Advanced</span></div>
+          <div class="bar-track"><div class="bar-fill peach" data-w="85"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-row-top"><span class="skill-name">Looker Studio / Google Data Studio</span><span class="skill-level">Advanced</span></div>
+          <div class="bar-track"><div class="bar-fill peach" data-w="84"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-row-top"><span class="skill-name">PowerBI</span><span class="skill-level">Intermediate</span></div>
+          <div class="bar-track"><div class="bar-fill peach" data-w="70"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-row-top"><span class="skill-name">Metabase</span><span class="skill-level">Intermediate</span></div>
+          <div class="bar-track"><div class="bar-fill peach" data-w="68"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <br>
+
+    <!-- two-col cards -->
+    <div class="groups-grid">
+      <div class="group-card">
+        <div class="skill-group-header" style="margin-bottom:0.8rem">
+          <span class="skill-group-icon">🤖</span>
+          <div>
+            <div class="skill-group-title">Automation & Tooling</div>
+          </div>
+        </div>
+        <div class="tag-cloud">
+          <span class="tag">Workflow Automation</span>
+          <span class="tag">API Integration</span>
+          <span class="tag">Automated Reporting</span>
+          <span class="tag">Spreadsheet Engineering</span>
+          <span class="tag">OOP / OOD</span>
+          <span class="tag">Google Calendar API</span>
+          <span class="tag">LMS Auditing</span>
+        </div>
+      </div>
+
+      <div class="group-card">
+        <div class="skill-group-header" style="margin-bottom:0.8rem">
+          <span class="skill-group-icon">🗂️</span>
+          <div>
+            <div class="skill-group-title">Operations & Project Mgmt</div>
+          </div>
+        </div>
+        <div class="tag-cloud">
+          <span class="tag pink">Capacity Planning</span>
+          <span class="tag pink">Resource Allocation</span>
+          <span class="tag pink">Stakeholder Mgmt</span>
+          <span class="tag pink">Contract Administration</span>
+          <span class="tag pink">Strategic Scheduling</span>
+          <span class="tag pink">Crisis Communication</span>
+          <span class="tag pink">Payroll Processing</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- languages / soft -->
+    <div style="margin-top: 2rem;">
+      <div class="group-card">
+        <div class="skill-group-header" style="margin-bottom:0.8rem">
+          <span class="skill-group-icon">🌏</span>
+          <div>
+            <div class="skill-group-title">Languages</div>
+          </div>
+        </div>
+        <div class="tag-cloud">
+          <span class="tag">Indonesian — Native</span>
+          <span class="tag">English — TOEFL 537</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <p>Crafted with 💜 by Zakiyatun Surya · <a href="https://github.com/zakiyyah-ai" target="_blank">GitHub</a> · <a href="https://www.linkedin.com/in/zakiyatun/" target="_blank">LinkedIn</a></p>
+</footer>
+
+<script>
+  // Animate bars on scroll
+  const fills = document.querySelectorAll('.bar-fill');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.width = e.target.dataset.w + '%';
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  fills.forEach(f => observer.observe(f));
+</script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Zakiyatun Surya</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-hero {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 4rem 2rem 2rem;
+    }
+    .page-hero h1 { margin-bottom: 0.8rem; }
+    .page-hero p { max-width: 560px; font-size: 1rem; }
+
+    /* filter pills */
+    .filter-row {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      margin-top: 1.8rem;
+    }
+    .filter-btn {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 0.35rem 0.9rem;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: 'Inter', sans-serif;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      border-color: var(--lavender);
+      color: var(--lavender);
+      background: rgba(201, 184, 245, 0.08);
+    }
+
+    /* projects grid */
+    .projects-grid {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 2rem 5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 1.2rem;
+    }
+    .proj-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.6rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      transition: border-color 0.25s, transform 0.25s;
+    }
+    .proj-card:hover {
+      border-color: rgba(201, 184, 245, 0.4);
+      transform: translateY(-3px);
+    }
+    .proj-year {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+    }
+    .proj-card h3 { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; }
+    .proj-card p { font-size: 0.88rem; color: rgba(247,245,255,0.62); flex: 1; }
+    .proj-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .proj-card[data-cat="ml"] .proj-accent { color: var(--lavender); }
+    .proj-card[data-cat="analytics"] .proj-accent { color: var(--pink); }
+    .proj-card[data-cat="automation"] .proj-accent { color: var(--mint); }
+    .proj-card[data-cat="challenge"] .proj-accent { color: #FFC9A0; }
+    .proj-hidden { display: none; }
+  </style>
+</head>
+<body data-page="projects">
+<script src="nav.js"></script>
+
+<main class="page">
+  <div class="page-hero">
+    <div class="section-label">Portfolio</div>
+    <h1>Things I've <span class="grad">built & explored</span></h1>
+    <p>Projects spanning machine learning, data analytics, automation, and data engineering — from retail ML to finance dashboards.</p>
+
+    <div class="filter-row">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="ml">Machine Learning</button>
+      <button class="filter-btn" data-filter="analytics">Analytics</button>
+      <button class="filter-btn" data-filter="automation">Automation</button>
+      <button class="filter-btn" data-filter="challenge">Challenges</button>
+    </div>
+  </div>
+
+  <div class="projects-grid">
+
+    <!-- ML Projects -->
+    <div class="proj-card" data-cat="ml">
+      <div class="proj-year">2021</div>
+      <h3 class="proj-accent">Machine Learning for Retail: Product Packaging</h3>
+      <p>Developed a machine learning model using R to optimize product packaging decisions for retail operations, applying clustering and classification techniques.</p>
+      <div class="proj-tags"><span class="tag">R</span><span class="tag">Machine Learning</span><span class="tag">Retail</span></div>
+    </div>
+
+    <div class="proj-card" data-cat="ml">
+      <div class="proj-year">2021</div>
+      <h3 class="proj-accent">Building a Recommender System with Python</h3>
+      <p>Implemented a collaborative filtering recommender system from scratch using Python and NumPy, exploring user-item matrix factorization approaches.</p>
+      <div class="proj-tags"><span class="tag">Python</span><span class="tag">NumPy</span><span class="tag">Recommender</span></div>
+    </div>
+
+    <div class="proj-card" data-cat="ml">
+      <div class="proj-year">2021</div>
+      <h3 class="proj-accent">Recommender System with Similarity Functions</h3>
+      <p>Extended the recommender system project with cosine and Pearson similarity functions, comparing performance across different similarity metrics.</p>
+      <div class="proj-tags"><span class="tag">Python</span><span class="tag">Similarity</span><span class="tag">ML</span></div>
+    </div>
+
+    <div class="proj-card" data-cat="ml">
+      <div class="proj-year">2021</div>
+      <h3 class="proj-accent">Loan Classification for MSME Sector</h3>
+      <p>Built a classification model to predict loan risk for micro, small, and medium enterprises, supporting financial inclusion decision-making.</p>
+      <div class="proj-tags"><span class="tag">Python</span><span class="tag">Classification</span><span class="tag">Finance</span></div>
+    </div>
+
+    <div class="proj-card" data-cat="ml">
+      <div class="proj-year">2021</div>
+      <h3 class="proj-accent">Data Scientist Assessment using R</h3>
+      <p>Completed a comprehensive data science assessment covering statistical analysis, machine learning model selection, and interpretation in R.</p>
+      <div class="proj-tags"><span class="tag">R</span><span class="tag">Statistics</span><span class="tag">Assessment</span></div>
+    </div>
+
+    <!-- Analytics Projects -->
+    <div class="proj-card" data-cat="analytics">
+      <div class="proj-year">2021</div>
+      <h3 class="proj-accent">Data Analyst for Finance: Branch Performance</h3>
+      <p>Analyzed multi-branch financial data to surface performance trends, identify underperforming locations, and generate executive-ready reports.</p>
+      <div class="proj-tags"><span class="tag pink">SQL</span><span class="tag pink">Finance</span><span class="tag pink">BI</span></div>
+    </div>
+
+    <div class="proj-card" data-cat="analytics">
+      <div class="proj-year">2021</div>
+      <h3 class="proj-accent">Finance: Investor Investment Process</h3>
+      <p>Mapped and analyzed the investor investment pipeline, creating dashboards to track conversion rates and flag bottlenecks in the process.</p>
+      <div class="proj-tags"><span class="tag pink">Analytics</span><span class="tag pink">Finance</span><span class="tag pink">Dashboard</span></div>
+    </div>
+
+    <div class="proj-card" data-cat="analytics">
+      <div class="proj-year">2021</div>
+      <h3 class="proj-accent">Retail: Sales Performance Report</h3>
+      <p>Built a comprehensive sales performance report for a retail client, visualizing SKU-level trends, seasonal patterns, and revenue attribution.</p>
+      <div class="proj-tags"><span class="tag pink">Retail</span><span class="tag pink">Analytics</span><span class="tag pink">Viz</span></div>
+    </div>
+
+    <div class="proj-card" data-cat="analytics">
+      <div class="proj-year">2021</div>
+      <h3 class="proj-accent">B2B Retail: Customer Analytics Report</h3>
+      <p>Produced a customer segmentation and behavior analytics report for B2B retail, identifying high-value accounts and churn risk signals.</p>
+      <div class="proj-tags"><span class="tag pink">B2B</span><span class="tag pink">Segmentation</span><span class="tag pink">Analytics</span></div>
+    </div>
+
+    <!-- Automation -->
+    <div class="proj-card" data-cat="automation">
+      <div class="proj-year">2021</div>
+      <h3 class="proj-accent">Simple ETL with Pandas</h3>
+      <p>Designed and implemented a lightweight ETL pipeline using Pandas to extract, clean, and load structured datasets, reducing processing time significantly.</p>
+      <div class="proj-tags"><span class="tag" style="color:var(--mint);border-color:rgba(184,245,228,0.3);background:rgba(184,245,228,0.08)">Python</span><span class="tag" style="color:var(--mint);border-color:rgba(184,245,228,0.3);background:rgba(184,245,228,0.08)">Pandas</span><span class="tag" style="color:var(--mint);border-color:rgba(184,245,228,0.3);background:rgba(184,245,228,0.08)">ETL</span></div>
+    </div>
+
+    <div class="proj-card" data-cat="automation">
+      <div class="proj-year">2021</div>
+      <h3 class="proj-accent">Fundamental SQL: Group By & Having</h3>
+      <p>Solved complex analytical queries using advanced SQL grouping, aggregation, and filtering patterns applicable to real-world business reporting.</p>
+      <div class="proj-tags"><span class="tag" style="color:var(--mint);border-color:rgba(184,245,228,0.3);background:rgba(184,245,228,0.08)">SQL</span><span class="tag" style="color:var(--mint);border-color:rgba(184,245,228,0.3);background:rgba(184,245,228,0.08)">Analytics</span></div>
+    </div>
+
+    <!-- Challenges -->
+    <div class="proj-card" data-cat="challenge">
+      <div class="proj-year">2021 · Achievement</div>
+      <h3 class="proj-accent">Data Analysis for E-Commerce Challenge</h3>
+      <p>Won a competitive data analysis challenge focused on e-commerce metrics, presenting insights on customer behavior and conversion optimization.</p>
+      <div class="proj-tags"><span class="tag" style="color:#FFC9A0;border-color:rgba(255,201,160,0.3);background:rgba(255,201,160,0.08)">Challenge</span><span class="tag" style="color:#FFC9A0;border-color:rgba(255,201,160,0.3);background:rgba(255,201,160,0.08)">E-Commerce</span></div>
+    </div>
+
+    <div class="proj-card" data-cat="challenge">
+      <div class="proj-year">2021 · Achievement</div>
+      <h3 class="proj-accent">Data Science Challenge with Python</h3>
+      <p>Completed an end-to-end data science challenge using Python, covering data cleaning, modeling, and results presentation under time constraints.</p>
+      <div class="proj-tags"><span class="tag" style="color:#FFC9A0;border-color:rgba(255,201,160,0.3);background:rgba(255,201,160,0.08)">Challenge</span><span class="tag" style="color:#FFC9A0;border-color:rgba(255,201,160,0.3);background:rgba(255,201,160,0.08)">Python</span></div>
+    </div>
+
+    <div class="proj-card" data-cat="challenge">
+      <div class="proj-year">2021 · Achievement</div>
+      <h3 class="proj-accent">Data Engineer Challenge with Python</h3>
+      <p>Built a data engineering pipeline in a competitive challenge setting, demonstrating skills in data ingestion, transformation, and output validation.</p>
+      <div class="proj-tags"><span class="tag" style="color:#FFC9A0;border-color:rgba(255,201,160,0.3);background:rgba(255,201,160,0.08)">Challenge</span><span class="tag" style="color:#FFC9A0;border-color:rgba(255,201,160,0.3);background:rgba(255,201,160,0.08)">Data Eng</span></div>
+    </div>
+
+    <div class="proj-card" data-cat="challenge">
+      <div class="proj-year">2021 · Achievement</div>
+      <h3 class="proj-accent">Data Engineer Challenge with SQL</h3>
+      <p>Solved a series of complex SQL engineering challenges including window functions, CTEs, and performance optimization for large datasets.</p>
+      <div class="proj-tags"><span class="tag" style="color:#FFC9A0;border-color:rgba(255,201,160,0.3);background:rgba(255,201,160,0.08)">Challenge</span><span class="tag" style="color:#FFC9A0;border-color:rgba(255,201,160,0.3);background:rgba(255,201,160,0.08)">SQL</span></div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <p>Crafted with 💜 by Zakiyatun Surya · <a href="https://github.com/zakiyyah-ai" target="_blank">GitHub</a> · <a href="https://www.linkedin.com/in/zakiyatun/" target="_blank">LinkedIn</a></p>
+</footer>
+
+<script>
+  const btns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.proj-card');
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      cards.forEach(card => {
+        if (filter === 'all' || card.dataset.cat === filter) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>
