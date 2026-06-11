@@ -166,6 +166,8 @@ nav {
 }
 .mobile-menu a:hover { color: var(--white); }
 .mobile-menu a:hover::after { transform: scaleX(1); }
+.mobile-menu a.active { color: var(--white); }
+.mobile-menu a.active::after { transform: scaleX(1); }
 
 /* ── PAGE WRAPPER ─────────────────────── */
 .page {
