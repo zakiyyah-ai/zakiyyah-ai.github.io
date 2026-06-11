@@ -144,26 +144,27 @@ nav {
   pointer-events: all;
 }
 .mobile-menu a {
-  color: var(--white);
+  color: var(--muted);
   text-decoration: none;
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   transition: color 0.2s;
   position: relative;
 }
 .mobile-menu a::after {
   content: '';
   position: absolute;
-  bottom: -4px; left: 0; right: 0;
-  height: 2px;
+  bottom: -3px; left: 0; right: 0;
+  height: 1px;
   background: linear-gradient(90deg, var(--lavender), var(--pink));
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.25s;
 }
-.mobile-menu a:hover { color: var(--lavender); }
+.mobile-menu a:hover { color: var(--white); }
 .mobile-menu a:hover::after { transform: scaleX(1); }
 
 /* ── PAGE WRAPPER ─────────────────────── */
