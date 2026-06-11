@@ -21,7 +21,7 @@
       </button>
     </nav>
     <div class="mobile-menu" id="mobileMenu">
-      ${links.map(l => `<a href="${l.href}">${l.label}</a>`).join('')}
+      ${links.map(l => `<a href="${l.href}" class="${page === l.label.toLowerCase() ? 'active' : ''}">${l.label}</a>`).join('')}
     </div>
     <div class="orb-wrap">
       <div class="orb orb-1"></div>
