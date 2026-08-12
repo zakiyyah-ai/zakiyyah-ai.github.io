@@ -1,65 +1,57 @@
-# Privacy Policy — ZS Sender
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZS Sender — Privacy Policy</title>
+  <style>
+    body{max-width:760px;margin:40px auto;padding:0 20px;font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6;color:#1a1a1a}
+    h1{font-size:24px} h2{font-size:17px;margin-top:28px} code{background:#f2f2f2;padding:1px 5px;border-radius:4px}
+    a{color:#0b8f6a}
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy — ZS Sender</h1>
+  <p><em>Last updated: 12 August 2026</em></p>
 
-_Last updated: 12 August 2026_
+  <p>ZS Sender ("the extension") lets you send WhatsApp messages from your own,
+  already-logged-in WhatsApp Web session, and export your own contacts. This page
+  explains what the extension does and does not do with your data.</p>
 
-ZS Sender ("the extension") is a browser tool that lets you send WhatsApp
-messages from your own, already–logged–in WhatsApp Web session, and export your
-own contacts. This policy explains what the extension does and does not do with
-your data.
+  <h2>Summary</h2>
+  <ul>
+    <li>The extension has no servers of its own.</li>
+    <li>It does not send your data to us or any third party.</li>
+    <li>All processing happens locally, inside your browser.</li>
+    <li>We do not sell, share, or transmit your personal data.</li>
+  </ul>
 
-## Summary
+  <h2>What the extension accesses</h2>
+  <ul>
+    <li>Your connected phone number and display name (to show connection status).</li>
+    <li>Your contacts, groups, chat list, and group members (only when you click "Load"/"Download").</li>
+    <li>Message content you type and files you attach, in order to send them.</li>
+  </ul>
 
-- The extension does **not** have its own servers.
-- The extension does **not** send your data to us or to any third party.
-- All processing happens **locally**, inside your browser.
-- We do **not** sell, share, or transmit your personal data.
+  <h2>How that data is used</h2>
+  <p>Recipient and message data is used only to compose and send the messages you
+  initiate, and to show a delivery report. Exported contacts are written to a CSV
+  downloaded directly to your device — never uploaded anywhere.</p>
 
-## What the extension accesses
+  <h2>What we store</h2>
+  <p>Only your interface preference (selected language) via Chrome local storage.
+  No cookies, analytics, tracking, or remote logging.</p>
 
-To do its job, the extension reads data from your active WhatsApp Web tab
-through the WhatsApp Web interface, including:
+  <h2>Third-party code</h2>
+  <p>The extension bundles the open-source library <code>@wppconnect/wa-js</code>.
+  Its optional Google Analytics and third-party link-preview services are disabled
+  by the extension, so nothing is sent to those endpoints.</p>
 
-- Your connected phone number and display name (to show connection status).
-- Your contacts, groups, chat list, and group members (only when you click the
-  relevant "Load" or "Download" buttons).
-- Message content you type, and files you attach, in order to send them.
+  <h2>Responsible use</h2>
+  <p>You are responsible for complying with WhatsApp's Terms of Service and
+  applicable laws. Only message people who agreed to be contacted.</p>
 
-## How that data is used
-
-- Recipient and message data is used solely to compose and send the messages
-  you initiate, and to show you a delivery report.
-- Contact/group data you choose to export is written to a CSV file that is
-  downloaded directly to your device. It is not uploaded anywhere.
-
-## What we store
-
-- The extension stores only your interface preferences (selected language) using
-  Chrome's local `storage`. This never leaves your device.
-- The extension does not use cookies, analytics, tracking, or remote logging.
-
-## Third-party code
-
-The extension bundles the open-source library **@wppconnect/wa-js** to talk to
-WhatsApp Web. Its optional telemetry (Google Analytics) and third-party
-link-preview services are **disabled** by the extension, so no data is sent to
-those endpoints.
-
-## Data sharing
-
-We do not share any data with anyone. No data is transmitted off your device by
-the extension.
-
-## Your control
-
-You can remove all locally stored preferences at any time by removing the
-extension from Chrome.
-
-## Responsible use
-
-You are responsible for how you use the extension and for complying with
-WhatsApp's Terms of Service and applicable laws. Only message people who have
-agreed to be contacted.
-
-## Contact
-
-Questions or requests: draft.zakiya.work@gmail.com
+  <h2>Contact</h2>
+  <p><a href="mailto:draft.zakiya.work@gmail.com">draft.zakiya.work@gmail.com</a></p>
+</body>
+</html>
