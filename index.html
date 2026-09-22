@@ -111,6 +111,52 @@
       .about-inner { grid-template-columns: 1fr; gap: 2rem; }
       .hero-stats { grid-template-columns: 1fr 1fr; }
     }
+
+    /* featured build */
+    .featured-build {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem 5rem;
+    }
+    .fb-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2.4rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem;
+      align-items: center;
+    }
+    .fb-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.8rem;
+    }
+    .fb-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--mint);
+      box-shadow: 0 0 8px var(--mint);
+    }
+    .fb-eyebrow span {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--mint);
+    }
+    .fb-card h3 { font-size: 1.5rem; margin-bottom: 0.6rem; }
+    .fb-card p { font-size: 0.92rem; max-width: 480px; }
+    .fb-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+    .fb-cta { display: flex; flex-direction: column; gap: 0.7rem; }
+    .fb-cta .btn { justify-content: center; }
+
+    @media (max-width: 700px) {
+      .fb-card { grid-template-columns: 1fr; }
+      .fb-cta { flex-direction: row; flex-wrap: wrap; }
+    }
   </style>
 </head>
 <body data-page="home">
@@ -122,7 +168,7 @@
   <section class="hero">
     <div class="hero-eyebrow"><span>Operations · Data · Automation</span></div>
     <h1>Hi, I'm <span class="grad">Zakiyatun</span> -<br><em>I turn messy data into clean systems.</em></h1>
-    <p class="hero-sub">Operations Specialist & Automation Enthusiast. I build Python pipelines, design data workflows, and orchestrate programs that actually scale.</p>
+    <p class="hero-sub">Operations Specialist & Automation Enthusiast. I build Python pipelines, design data workflows, and orchestrate programs that actually scale. Lately, that includes shipping my own tools, like a Chrome extension used by real people.</p>
     <div class="hero-cta">
       <a href="projects.html" class="btn btn-primary">✦ View Projects</a>
       <a href="contact.html" class="btn btn-outline">Let's connect</a>
@@ -141,6 +187,26 @@
       <div>
         <div class="stat-num">3+</div>
         <div class="stat-label">Years in operations & automation</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FEATURED BUILD ── -->
+  <section class="featured-build">
+    <div class="fb-card">
+      <div>
+        <div class="fb-eyebrow"><span class="fb-dot"></span><span>Live on the Chrome Web Store</span></div>
+        <h3>ZS Sender: <span class="grad">WhatsApp Web, automated.</span></h3>
+        <p>A Chrome extension I built and shipped end to end: personalized WhatsApp messaging, CSV import, group tools, and privacy first design, all running locally with no servers.</p>
+        <div class="fb-tags">
+          <span class="tag">Chrome Extension</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag pink">Product Design</span>
+        </div>
+      </div>
+      <div class="fb-cta">
+        <a href="https://chromewebstore.google.com/detail/zs-sender-whatsapp-bulk-s/goccbmpegaongfpnoemfaobfbcglnjhi" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Add to Chrome</a>
+        <a href="zs-sender.html" class="btn btn-outline">Learn more</a>
       </div>
     </div>
   </section>
