@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:description" content="ZS Sender: a Chrome extension for sending personalized WhatsApp messages from WhatsApp Web, built by Zakiyatun Surya." />
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <title>ZS Sender - Zakiyatun Surya</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── HERO ── */
+    .zs-hero {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 4rem 2rem 2rem;
+    }
+    .zs-hero h1 { margin-bottom: 1rem; }
+    .zs-hero p.lead { max-width: 620px; font-size: 1.02rem; margin-bottom: 2rem; }
+    .zs-cta { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
+
+    .zs-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .zs-stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.1rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--lavender), var(--pink));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+    .zs-stat-label { font-size: 0.8rem; color: var(--muted); letter-spacing: 0.04em; }
+
+    /* ── FEATURES ── */
+    .zs-feat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.2rem;
+      margin-top: 2.5rem;
+    }
+    .zs-feat-grid .feat-icon { font-size: 1.8rem; margin-bottom: 0.8rem; }
+    .zs-feat-grid h3 { margin-bottom: 0.5rem; }
+    .zs-feat-grid p { font-size: 0.9rem; }
+
+    /* ── STEPS ── */
+    .zs-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.2rem;
+      margin-top: 2.5rem;
+    }
+    .zs-step-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--lavender);
+      margin-bottom: 0.6rem;
+    }
+    .zs-step h3 { font-size: 1rem; margin-bottom: 0.4rem; }
+    .zs-step p { font-size: 0.85rem; }
+
+    /* ── TUTORIALS ── */
+    .zs-lang-row {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      margin-top: 1.8rem;
+      margin-bottom: 2rem;
+    }
+    .zs-video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.2rem;
+    }
+    .zs-video-panel { display: none; }
+    .zs-video-panel.active { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
+
+    .zs-video-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: border-color 0.25s, transform 0.25s;
+    }
+    .zs-video-card:hover { border-color: rgba(201, 184, 245, 0.4); transform: translateY(-3px); }
+
+    .zs-video-thumb {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      background: var(--card2);
+      cursor: pointer;
+      overflow: hidden;
+    }
+    .zs-video-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .zs-video-thumb iframe { width: 100%; height: 100%; border: 0; display: block; }
+    .zs-play-btn {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      background: rgba(13, 15, 26, 0.72);
+      border: 1px solid rgba(247, 245, 255, 0.4);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--white);
+      font-size: 1.3rem;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .zs-video-thumb:hover .zs-play-btn { background: rgba(201, 184, 245, 0.85); color: var(--navy); transform: translate(-50%, -50%) scale(1.06); }
+
+    .zs-video-meta { padding: 1rem 1.2rem 1.3rem; }
+    .zs-video-meta h3 { font-size: 0.98rem; margin-bottom: 0.3rem; }
+    .zs-video-meta p { font-size: 0.82rem; color: rgba(247,245,255,0.6); }
+
+    /* ── FINAL CTA ── */
+    .zs-final {
+      background: var(--card);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
+    .zs-final-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+    .zs-final h2 { margin-bottom: 0.8rem; }
+    .zs-final p { margin-bottom: 2rem; }
+    .zs-final .zs-cta { justify-content: center; margin-bottom: 0; }
+
+    @media (max-width: 700px) {
+      .zs-stats { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body data-page="zs-sender">
+<script src="nav.js"></script>
+
+<main class="page">
+
+  <!-- ── HERO ── -->
+  <section class="zs-hero">
+    <div class="section-label">Chrome Extension</div>
+    <h1>ZS Sender: <span class="grad">personalized WhatsApp messages, sent your way.</span></h1>
+    <p class="lead">A Chrome extension that helps you send personalized WhatsApp messages straight from WhatsApp Web: import a CSV, pick contacts or groups, set your own pace, and everything runs locally in your browser.</p>
+    <div class="zs-cta">
+      <a href="https://chromewebstore.google.com/detail/zs-sender-whatsapp-bulk-s/goccbmpegaongfpnoemfaobfbcglnjhi" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Add to Chrome</a>
+      <a href="#tutorials" class="btn btn-outline">Watch tutorials</a>
+      <a href="privacy.html" class="btn btn-outline">Privacy policy</a>
+    </div>
+
+    <div class="zs-stats">
+      <div>
+        <div class="zs-stat-num">4</div>
+        <div class="zs-stat-label">Ways to build a recipient list</div>
+      </div>
+      <div>
+        <div class="zs-stat-num">2</div>
+        <div class="zs-stat-label">Languages: English & Indonesian</div>
+      </div>
+      <div>
+        <div class="zs-stat-num">0</div>
+        <div class="zs-stat-label">Servers. Everything stays on your device</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHAT IT DOES ── -->
+  <section class="section">
+    <div class="section-label">What It Does</div>
+    <h2>Everything you need, <span class="grad">nothing you don't.</span></h2>
+    <div class="zs-feat-grid">
+      <div class="card feat-card">
+        <div class="feat-icon">📇</div>
+        <h3>Flexible recipient lists</h3>
+        <p>Build your list from numbers, saved contacts, groups, or ready made lists like Unread and Favourites.</p>
+      </div>
+      <div class="card feat-card">
+        <div class="feat-icon">🧩</div>
+        <h3>Personalize with variables</h3>
+        <p>Import a CSV and drop in variables like {name} or {city} so every message reads like it was written by hand.</p>
+      </div>
+      <div class="card feat-card">
+        <div class="feat-icon">⏱️</div>
+        <h3>Natural sending pace</h3>
+        <p>Random delays and batching keep sends looking human, with a live report as each message goes out.</p>
+      </div>
+      <div class="card feat-card">
+        <div class="feat-icon">👥</div>
+        <h3>Create groups & invite members</h3>
+        <p>Spin up a WhatsApp group and add members straight from your recipient list, in the same panel.</p>
+      </div>
+      <div class="card feat-card">
+        <div class="feat-icon">📤</div>
+        <h3>Export your own data</h3>
+        <p>Download saved contacts, unsaved contacts, or group members to CSV whenever you need them.</p>
+      </div>
+      <div class="card feat-card">
+        <div class="feat-icon">🔒</div>
+        <h3>Private by design</h3>
+        <p>No servers, no analytics, no tracking. ZS Sender only talks to the WhatsApp Web tab that's already open.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HOW IT WORKS ── -->
+  <div class="about-strip">
+    <div style="max-width:1000px;margin:0 auto;padding:4rem 2rem;">
+      <div class="section-label">Get Started</div>
+      <h2>Up and running in <span class="grad">four steps.</span></h2>
+      <div class="zs-steps">
+        <div class="zs-step">
+          <div class="zs-step-num">01</div>
+          <h3>Install the extension</h3>
+          <p>Add ZS Sender from the Chrome Web Store and pin it to your toolbar.</p>
+        </div>
+        <div class="zs-step">
+          <div class="zs-step-num">02</div>
+          <h3>Open WhatsApp Web</h3>
+          <p>Log in as usual. ZS Sender connects to the tab you already have open.</p>
+        </div>
+        <div class="zs-step">
+          <div class="zs-step-num">03</div>
+          <h3>Build your list</h3>
+          <p>Import a CSV, or pick straight from contacts, groups, or lists.</p>
+        </div>
+        <div class="zs-step">
+          <div class="zs-step-num">04</div>
+          <h3>Write & send</h3>
+          <p>Add variables, set your pace, and hit start. Watch the live report as it runs.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TUTORIALS ── -->
+  <section class="section" id="tutorials">
+    <div class="section-label">Video Tutorials</div>
+    <h2>See it <span class="grad">in action.</span></h2>
+    <p style="max-width:560px;margin-top:0.8rem;">Step by step walkthroughs, in English and Indonesian.</p>
+
+    <div class="zs-lang-row">
+      <button class="filter-btn active" data-lang="en">English</button>
+      <button class="filter-btn" data-lang="id">Indonesia</button>
+    </div>
+
+    <!--
+      HOW TO ADD A VIDEO
+      1. Copy one .zs-video-card block below.
+      2. Set data-id to the YouTube video ID (the part after watch?v= in the URL).
+      3. Replace the thumbnail img src's VIDEO_ID_HERE with the same ID.
+      4. Replace the <h3> and <p> with your own section name and short description.
+    -->
+
+    <!-- English tutorials -->
+    <div class="zs-video-panel active" id="zs-tut-en">
+      <div class="zs-video-card">
+        <div class="zs-video-thumb" data-id="VIDEO_ID_HERE">
+          <img src="https://img.youtube.com/vi/VIDEO_ID_HERE/hqdefault.jpg" alt="Tutorial thumbnail" loading="lazy">
+          <div class="zs-play-btn">&#9658;</div>
+        </div>
+        <div class="zs-video-meta">
+          <h3>Part 1 - Section name here</h3>
+          <p>Short description of what this part covers.</p>
+        </div>
+      </div>
+
+      <div class="zs-video-card">
+        <div class="zs-video-thumb" data-id="VIDEO_ID_HERE">
+          <img src="https://img.youtube.com/vi/VIDEO_ID_HERE/hqdefault.jpg" alt="Tutorial thumbnail" loading="lazy">
+          <div class="zs-play-btn">&#9658;</div>
+        </div>
+        <div class="zs-video-meta">
+          <h3>Part 2 - Section name here</h3>
+          <p>Short description of what this part covers.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Indonesian tutorials -->
+    <div class="zs-video-panel" id="zs-tut-id">
+      <div class="zs-video-card">
+        <div class="zs-video-thumb" data-id="VIDEO_ID_HERE">
+          <img src="https://img.youtube.com/vi/VIDEO_ID_HERE/hqdefault.jpg" alt="Thumbnail tutorial" loading="lazy">
+          <div class="zs-play-btn">&#9658;</div>
+        </div>
+        <div class="zs-video-meta">
+          <h3>Part 1 - Nama section di sini</h3>
+          <p>Deskripsi singkat bagian ini.</p>
+        </div>
+      </div>
+
+      <div class="zs-video-card">
+        <div class="zs-video-thumb" data-id="VIDEO_ID_HERE">
+          <img src="https://img.youtube.com/vi/VIDEO_ID_HERE/hqdefault.jpg" alt="Thumbnail tutorial" loading="lazy">
+          <div class="zs-play-btn">&#9658;</div>
+        </div>
+        <div class="zs-video-meta">
+          <h3>Part 2 - Nama section di sini</h3>
+          <p>Deskripsi singkat bagian ini.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FINAL CTA ── -->
+  <div class="zs-final">
+    <div class="zs-final-inner">
+      <div class="section-label">Ready?</div>
+      <h2>Try ZS Sender <span class="grad">today.</span></h2>
+      <p>Free to install, runs entirely in your browser, and works with the WhatsApp Web you already use.</p>
+      <div class="zs-cta">
+        <a href="https://chromewebstore.google.com/detail/zs-sender-whatsapp-bulk-s/goccbmpegaongfpnoemfaobfbcglnjhi" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Add to Chrome</a>
+        <a href="projects.html" class="btn btn-outline">Back to Projects</a>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>Crafted with 💜 by Zakiyatun Surya &middot; <a href="https://github.com/zakiyyah-ai" target="_blank">GitHub</a> &middot; <a href="https://www.linkedin.com/in/zakiyatun/" target="_blank">LinkedIn</a></p>
+</footer>
+
+<script>
+  // Language tabs
+  document.querySelectorAll('.zs-lang-row .filter-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('.zs-lang-row .filter-btn').forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var lang = btn.dataset.lang;
+      document.getElementById('zs-tut-en').classList.toggle('active', lang === 'en');
+      document.getElementById('zs-tut-id').classList.toggle('active', lang === 'id');
+    });
+  });
+
+  // Lazy load YouTube embeds on click
+  document.querySelectorAll('.zs-video-thumb').forEach(function (thumb) {
+    thumb.addEventListener('click', function () {
+      var id = thumb.dataset.id;
+      if (!id || id === 'VIDEO_ID_HERE') return;
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1';
+      iframe.title = 'ZS Sender tutorial video';
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+      iframe.setAttribute('allowfullscreen', '');
+      thumb.innerHTML = '';
+      thumb.appendChild(iframe);
+    });
+  });
+</script>
+
+</body>
+</html>
