@@ -79,6 +79,7 @@
     .proj-card[data-cat="analytics"] .proj-accent { color: var(--pink); }
     .proj-card[data-cat="automation"] .proj-accent { color: var(--mint); }
     .proj-card[data-cat="challenge"] .proj-accent { color: #FFC9A0; }
+    .proj-card[data-cat="tools"] .proj-accent { color: #9FD8FF; }
     .proj-hidden { display: none; }
   </style>
 </head>
@@ -93,12 +94,22 @@
 
     <div class="filter-row">
       <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="tools">Tools</button>
       <button class="filter-btn" data-filter="analytics">Analytics</button>
       <button class="filter-btn" data-filter="automation">Automation</button>
     </div>
   </div>
 
   <div class="projects-grid">
+
+    <!-- ZS Sender (live product) -->
+    <div class="proj-card" data-cat="tools">
+      <div class="proj-year">2026 &middot; Live Product</div>
+      <h3 class="proj-accent">ZS Sender: WhatsApp Web Automation</h3>
+      <p>A Chrome extension that sends personalized WhatsApp messages from WhatsApp Web. CSV import, groups, delays and batching, all running locally with no servers.</p>
+      <div class="proj-tags"><span class="tag" style="color:#9FD8FF;border-color:rgba(159,216,255,0.3);background:rgba(159,216,255,0.08)">Chrome Extension</span><span class="tag" style="color:#9FD8FF;border-color:rgba(159,216,255,0.3);background:rgba(159,216,255,0.08)">JavaScript</span><span class="tag" style="color:#9FD8FF;border-color:rgba(159,216,255,0.3);background:rgba(159,216,255,0.08)">Automation</span></div>
+      <a href="zs-sender.html" class="btn btn-outline" style="align-self:flex-start;margin-top:0.4rem;">Learn more</a>
+    </div>
 
     <!-- ML Projects -->
     <div class="proj-card" data-cat="ml">
