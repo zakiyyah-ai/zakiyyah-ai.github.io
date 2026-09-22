@@ -75,6 +75,25 @@
       margin-top: 1.8rem;
       margin-bottom: 2rem;
     }
+
+    .filter-btn {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 0.35rem 0.9rem;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: 'Inter', sans-serif;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      border-color: var(--lavender);
+      color: var(--lavender);
+      background: rgba(201, 184, 245, 0.08);
+    }
     
     .zs-video-grid {
       display: grid;
