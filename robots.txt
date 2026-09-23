@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zakiyyah-ai.github.io/sitemap.xml
