@@ -45,35 +45,6 @@
     }
     .skill-group-desc { font-size: 0.84rem; color: var(--muted); }
 
-    .skill-bars { display: flex; flex-direction: column; gap: 0.9rem; }
-    .skill-row { display: flex; flex-direction: column; gap: 0.3rem; }
-    .skill-row-top {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.83rem;
-    }
-    .skill-name { font-weight: 500; }
-    .skill-level { color: var(--muted); font-size: 0.76rem; }
-    .bar-track {
-      height: 5px;
-      background: var(--card2);
-      border-radius: 10px;
-      overflow: hidden;
-    }
-    .bar-fill {
-      height: 100%;
-      border-radius: 10px;
-      background: linear-gradient(90deg, var(--lavender), var(--pink));
-      width: 0;
-      transition: width 1s cubic-bezier(0.25, 1, 0.5, 1);
-    }
-    .bar-fill.mint {
-      background: linear-gradient(90deg, var(--mint), var(--lavender));
-    }
-    .bar-fill.peach {
-      background: linear-gradient(90deg, #FFC9A0, var(--pink));
-    }
-
     /* tag clouds */
     .tag-cloud {
       display: flex;
@@ -138,6 +109,7 @@
         </div>
         <div class="tag-cloud">
           <span class="tag mint">ETL & Data Pipeline Design</span>
+          <span class="tag mint">Cohort Analysis</span>
           <span class="tag mint">Predictive Analytics & Time Series</span>
           <span class="tag mint">A/B Testing & Statistics</span>
           <span class="tag mint">Machine Learning (Classification, Clustering, Rec. Systems)</span>
@@ -193,7 +165,10 @@
           <span class="tag pink">Payroll Processing</span>
         </div>
       </div>
+    </div>
 
+    <!-- languages / soft -->
+    <div style="margin-top: 2rem;">
       <div class="group-card">
         <div class="skill-group-header" style="margin-bottom:0.8rem">
           <span class="skill-group-icon">🌏</span>
@@ -215,18 +190,5 @@
   <p>Crafted with 💜 by Zakiyatun Surya · <a href="https://github.com/zakiyyah-ai" target="_blank">GitHub</a> · <a href="https://www.linkedin.com/in/zakiyatun/" target="_blank">LinkedIn</a></p>
 </footer>
 
-<script>
-  // Animate bars on scroll
-  const fills = document.querySelectorAll('.bar-fill');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.style.width = e.target.dataset.w + '%';
-        observer.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.2 });
-  fills.forEach(f => observer.observe(f));
-</script>
 </body>
 </html>
