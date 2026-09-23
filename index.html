@@ -199,6 +199,30 @@
       .fb-card { grid-template-columns: 1fr; }
       .fb-cta { flex-direction: row; flex-wrap: wrap; }
     }
+
+    /* testimonials */
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.2rem;
+      margin-top: 2.5rem;
+    }
+    .testi-card { display: flex; flex-direction: column; gap: 1rem; }
+    .testi-mark {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--lavender);
+      opacity: 0.6;
+    }
+    .testi-card p.testi-text {
+      font-size: 0.92rem;
+      flex: 1;
+    }
+    .testi-author { display: flex; flex-direction: column; gap: 0.15rem; }
+    .testi-author strong { font-size: 0.9rem; font-weight: 600; }
+    .testi-author span { font-size: 0.78rem; color: var(--muted); }
   </style>
 </head>
 <body data-page="home">
@@ -211,7 +235,7 @@
     <div class="status-badge"><span class="status-dot"></span>Open to new opportunities</div>
     <div class="hero-eyebrow"><span>Operations · Data · Automation</span></div>
     <h1>Hi, I'm <span class="grad">Zakiyatun</span> -<br><em>I turn messy data into clean systems.</em></h1>
-    <p class="hero-sub">Operations Specialist & Automation at Pacmann AI. I build Python pipelines, design data workflows, and orchestrate programs that actually scale. Lately, that includes shipping my own tools, like a Chrome extension used by real people.</p>
+    <p class="hero-sub">Operations Specialist at Pacmann AI & Automation Enthusiast. I build Python pipelines, design data workflows, and orchestrate programs that actually scale. Lately, that includes shipping my own tools, like a Chrome extension used by real people.</p>
     <div class="hero-cta">
       <a href="projects.html" class="btn btn-primary">✦ View Projects</a>
       <a href="contact.html" class="btn btn-outline">Let's connect</a>
@@ -294,6 +318,30 @@
         <div class="feat-icon">🗂️</div>
         <h3>Operations Management</h3>
         <p>End-to-end program lifecycle management, capacity planning, and stakeholder communication at scale.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIALS ── -->
+  <section class="section">
+    <div class="section-label">What People Say</div>
+    <h2>Trusted by <span class="grad">people I've worked with.</span></h2>
+    <div class="testi-grid">
+      <div class="card testi-card">
+        <div class="testi-mark">"</div>
+        <p class="testi-text">Zakiya is an excellent coordinator. Not only is she friendly and helpful, but she also always tries to maintain team spirit. She knows how to listen and always pays attention to every detail, and her understanding of people's needs is outstanding, so much so that everyone working under her feels comfortable. As a class coordinator, she instills positive energy in every team member, keeping everyone focused on what needs to be achieved.</p>
+        <div class="testi-author">
+          <strong>Layli R. Yuwono</strong>
+          <span>Direct report · Nov 2023</span>
+        </div>
+      </div>
+      <div class="card testi-card">
+        <div class="testi-mark">"</div>
+        <p class="testi-text">She was a professional classmate. Even though she was not the mentor, she had fast response, brilliant insight, and a down-to-earth personality.</p>
+        <div class="testi-author">
+          <strong>Christopher Alexander Kafa</strong>
+          <span>Classmate, Digital Talent Scholarship · May 2021</span>
+        </div>
       </div>
     </div>
   </section>
