@@ -15,12 +15,14 @@
 | Skills | `skills.html` | Animated skill bars + tag clouds |
 | CV | `cv.html` | Timeline of experience & education |
 | Contact | `contact.html` | Social links + contact form |
+| ZS Sender | `zs-sender.html` | Landing page for the ZS Sender Chrome extension, with tutorial videos |
+| Privacy | `privacy.html` | Privacy policy for the ZS Sender Chrome extension |
 
 ---
 
 ## 🛠️ Tech Stack
 
-- Pure HTML, CSS, and vanilla JavaScript — no frameworks, no build tools
+- Pure HTML, CSS, and vanilla JavaScript - no frameworks, no build tools
 - Google Fonts: [Playfair Display](https://fonts.google.com/specimen/Playfair+Display) + [Inter](https://fonts.google.com/specimen/Inter)
 - Responsive with hamburger menu on mobile
 - Deployed via [GitHub Pages](https://pages.github.com/)
@@ -45,9 +47,14 @@ zakiyyah-ai.github.io/
 ├── skills.html       # Skills
 ├── cv.html           # CV / Résumé
 ├── contact.html      # Contact
+├── zs-sender.html    # ZS Sender Chrome extension landing page
+├── privacy.html      # ZS Sender privacy policy
 ├── style.css         # Shared styles
 ├── nav.js            # Shared navigation & hamburger menu
 ├── logo.png          # Logo
+├── favicon.png        # Favicon
+├── robots.txt         # Search engine crawl rules
+├── sitemap.xml         # Sitemap for search engines
 └── README.md
 ```
 
