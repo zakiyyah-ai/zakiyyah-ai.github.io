@@ -1,6 +1,6 @@
 # ✦ zakiyyah-ai.github.io
 
-> Personal portfolio site of **Zakiyatun Surya** — Operations Specialist & Automation Enthusiast.
+> Personal portfolio site of **Zakiyatun Surya** - Operations Specialist & Automation Enthusiast.
 
 🔗 **Live site:** [zakiyyah-ai.github.io](https://zakiyyah-ai.github.io)
 
@@ -47,7 +47,7 @@ zakiyyah-ai.github.io/
 ├── contact.html      # Contact
 ├── style.css         # Shared styles
 ├── nav.js            # Shared navigation & hamburger menu
-├── logo.png          # ZAKIYA logo
+├── logo.png          # Logo
 └── README.md
 ```
 
@@ -55,7 +55,7 @@ zakiyyah-ai.github.io/
 
 ## 👩‍💻 About Me
 
-I'm Zakiyatun Surya — an Operations Specialist at Pacmann AI with a background in Mathematics Education. I build Python automations, design data pipelines, and manage complex program lifecycles.
+I'm Zakiyatun Surya - an Operations Specialist at Pacmann AI with a background in Mathematics Education. I build Python automations, design data pipelines, and manage complex program lifecycles.
 
 - 📧 draft.zakiya.work@gmail.com
 - 💼 [linkedin.com/in/zakiyatun](https://www.linkedin.com/in/zakiyatun/)
