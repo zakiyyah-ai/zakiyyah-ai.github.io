@@ -250,6 +250,16 @@ p { color: rgba(255, 255, 255, 0.72); }
   border-color: rgba(245, 184, 212, 0.25);
   color: var(--pink);
 }
+.tag.mint {
+  background: rgba(184, 245, 228, 0.1);
+  border-color: rgba(184, 245, 228, 0.25);
+  color: var(--mint);
+}
+.tag.peach {
+  background: rgba(255, 201, 160, 0.1);
+  border-color: rgba(255, 201, 160, 0.25);
+  color: #FFC9A0;
+}
 
 /* ── BUTTONS ──────────────────────────── */
 .btn {
