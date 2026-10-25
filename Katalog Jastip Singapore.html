@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Katalog Jastip Singapore</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#f6f4f1;--surface:#ffffff;--ink:#1b2a41;--muted:#5c6b80;--line:#dcd8d2;--accent:#d62839;--accent-ink:#ffffff;--chip:#ece8e3;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121a26;--surface:#1a2535;--ink:#eef1f6;--muted:#9aa8bc;--line:#2b3a50;--accent:#ff5a6a;--accent-ink:#1b0a0d;--chip:#223045}}
+:root[data-theme="dark"]{--bg:#121a26;--surface:#1a2535;--ink:#eef1f6;--muted:#9aa8bc;--line:#2b3a50;--accent:#ff5a6a;--accent-ink:#1b0a0d;--chip:#223045}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.5 "DM Sans",system-ui,sans-serif}
+main{max-width:720px;margin:0 auto;padding:28px 18px 120px}
+h1,h2{font-family:"Bricolage Grotesque","DM Sans",system-ui,sans-serif;margin:0}
+h1{font-weight:800;font-size:clamp(34px,9vw,52px);line-height:1.02;letter-spacing:-.02em}
+.sub{margin:12px 0 0;color:var(--muted);max-width:46ch}
+.dates{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0 0}
+.date{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px}
+.date b{display:block;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:20px}
+.date span{font-size:13px;color:var(--muted)}
+.date.hot{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.date.hot span{color:inherit;opacity:.85}
+.chips{display:flex;gap:8px;margin:30px 0 6px;overflow-x:auto;padding-bottom:4px}
+.chip{border:0;background:var(--chip);color:var(--ink);font:500 15px "DM Sans",system-ui,sans-serif;padding:9px 16px;border-radius:999px;cursor:pointer;white-space:nowrap}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.chip:focus-visible,button:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.group{margin-top:26px}
+.group h2{font-size:24px;padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.item{display:grid;grid-template-columns:auto 64px 1fr auto;gap:4px 14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.item input{width:22px;height:22px;accent-color:var(--accent);grid-row:1/3;grid-column:1}
+.item .th{grid-row:1/3;grid-column:2;width:64px;height:64px;border-radius:10px;object-fit:cover;background:var(--chip);display:flex;align-items:center;justify-content:center;font-size:26px}
+.item .n{grid-column:3;font-weight:700}
+.item .s{grid-column:3;color:var(--muted);font-size:14px}
+.item .p{grid-row:1/3;grid-column:4;text-align:right;font-size:14px;color:var(--muted)}
+.item label{display:contents}
+.how{margin-top:44px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
+.how h2{font-size:22px;margin-bottom:10px}
+.how ol{margin:0;padding-left:20px}.how li{margin:6px 0}
+.note{margin-top:16px;font-size:14px;color:var(--muted)}
+.bar{position:fixed;left:0;right:0;bottom:0;background:var(--surface);border-top:1px solid var(--line);padding:12px 18px calc(12px + env(safe-area-inset-bottom,0px));display:flex;gap:12px;align-items:center;justify-content:space-between}
+.bar span{font-weight:500}
+.btn{border:0;background:var(--accent);color:var(--accent-ink);font:700 15px "DM Sans",system-ui,sans-serif;padding:11px 18px;border-radius:10px;cursor:pointer}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+dialog{border:1px solid var(--line);border-radius:14px;background:var(--surface);color:var(--ink);width:min(560px,92vw);padding:20px}
+dialog::backdrop{background:rgba(0,0,0,.5)}
+textarea{width:100%;min-height:200px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:400 14px/1.5 "DM Sans",system-ui,sans-serif;padding:12px;margin:12px 0}
+.row{display:flex;gap:10px;justify-content:flex-end}
+.btn.ghost{background:var(--chip);color:var(--ink)}
+.ok{color:var(--muted);font-size:14px;margin:0}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<main>
+<h1>Jastip Singapore</h1>
+<p class="sub">Skincare, fashion, dan camilan langsung dari Singapore. Pilih barangnya, lalu kirim pesanan lewat WhatsApp.</p>
+<div class="dates">
+<div class="date hot"><b>30 Oktober</b><span>Batas order</span></div>
+<div class="date"><b>2 November</b><span>Pulang ke Indonesia</span></div>
+<div class="date"><b>3–5 November</b><span>Barang dikirim</span></div>
+</div>
+
+<div class="chips" role="group" aria-label="Filter kategori">
+<button class="chip" data-f="all" aria-pressed="true">Semua</button>
+<button class="chip" data-f="Skincare" aria-pressed="false">Skincare</button>
+<button class="chip" data-f="Fashion" aria-pressed="false">Fashion</button>
+<button class="chip" data-f="Camilan" aria-pressed="false">Camilan</button>
+</div>
+<div id="list"></div>
+
+<section class="how">
+<h2>Cara order</h2>
+<ol>
+<li>Centang barang yang kamu mau.</li>
+<li>Tekan “Lihat pesanan”, lalu “Kirim ke WhatsApp”.</li>
+<li>Di chat, lengkapi varian, warna, atau ukuran.</li>
+<li>Harga final dikonfirmasi lewat chat. Barang dibelikan setelah pembayaran masuk.</li>
+</ol>
+<p class="note">Harga mengikuti harga di toko Singapore pada hari belanja, kurs saat pembayaran, biaya pajak impor, dan fee jastip. Stok bisa habis, dan kalau kosong kamu akan dikabari atau dana dikembalikan.</p>
+</section>
+</main>
+
+<div class="bar">
+<span id="count">0 barang dipilih</span>
+<button class="btn" id="open" disabled>Lihat pesanan</button>
+</div>
+
+<dialog id="dlg">
+<h2 style="font-size:22px">Pesananmu</h2>
+<textarea id="out"></textarea>
+<p class="ok" id="msg">Salin teks ini lalu kirim ke WhatsApp.</p>
+<div class="row" style="margin-top:12px">
+<button class="btn ghost" id="close">Tutup</button>
+<button class="btn ghost" id="copy">Salin</button>
+<a class="btn" id="wa" href="https://wa.me/62895336019120" target="_blank" rel="noopener" style="text-decoration:none">Kirim ke WhatsApp</a>
+</div>
+</dialog>
+
+<script>
+var P=[
+["Skincare","Anessa Perfect UV Sunscreen","Don Don Donki, Watsons"],
+["Skincare","Biore UV Aqua Rich Watery Essence","Don Don Donki, Watsons"],
+["Skincare","Skin Aqua Tone Up UV Essence","Don Don Donki, Watsons"],
+["Skincare","Hada Labo Gokujyun Lotion","Watsons, Guardian"],
+["Skincare","CeraVe Moisturising Lotion","Watsons, Guardian"],
+["Skincare","La Roche-Posay Anthelios","Watsons, Guardian"],
+["Skincare","Cetaphil Gentle Skin Cleanser","Watsons, Guardian"],
+["Skincare","Bio-Oil","Watsons, Guardian"],
+["Skincare","Tiger Balm","Watsons, Mustafa Centre"],
+["Skincare","Rohto Melano CC Serum","Don Don Donki, Watsons"],
+["Fashion","Charles & Keith: tas","Orchard, Bugis Junction, VivoCity"],
+["Fashion","Charles & Keith: sepatu dan sandal","Orchard, Bugis Junction, VivoCity"],
+["Fashion","Pedro: tas dan sepatu","Orchard, VivoCity"],
+["Fashion","Love Bonito: pakaian wanita","Ion Orchard"],
+["Fashion","Uniqlo Singapore: item basic","Orchard, Bugis"],
+["Fashion","Cotton On dan Typo","Bugis Junction, VivoCity"],
+["Fashion","Aksesori dan scrunchie","Bugis Street"],
+["Camilan","Irvins Salted Egg Fish Skin","Irvins, Jewel Changi"],
+["Camilan","Irvins Salted Egg Potato Chips","Irvins, Jewel Changi"],
+["Camilan","Bengawan Solo: kue pandan dan pineapple tart","Bengawan Solo"],
+["Camilan","Kaya jam Ya Kun","Ya Kun, supermarket"],
+["Camilan","Bacha Coffee","Raffles Hotel Arcade"],
+["Camilan","TWG Tea","Ion Orchard, Marina Bay Sands"],
+["Camilan","Kit Kat dan mochi varian Jepang","Don Don Donki"],
+["Camilan","Cokelat dan kurma","Mustafa Centre"]
+];
+/* GAMBAR PRODUK: isi alamat gambar di antara tanda kutip kedua, contoh: "Bio-Oil":"data:image/jpeg;base64,..."
+   Kalau dikosongkan, tampil kotak placeholder. Di halaman yang dipublish lewat Claude, gambar dari link luar tidak tampil;
+   pakai data:image (base64) atau hosting sendiri. */
+var IMG={
+"Anessa Perfect UV Sunscreen":"",
+"Biore UV Aqua Rich Watery Essence":"",
+"Skin Aqua Tone Up UV Essence":"",
+"Hada Labo Gokujyun Lotion":"",
+"CeraVe Moisturising Lotion":"",
+"La Roche-Posay Anthelios":"",
+"Cetaphil Gentle Skin Cleanser":"",
+"Bio-Oil":"",
+"Tiger Balm":"",
+"Rohto Melano CC Serum":"",
+"Charles & Keith: tas":"",
+"Charles & Keith: sepatu dan sandal":"",
+"Pedro: tas dan sepatu":"",
+"Love Bonito: pakaian wanita":"",
+"Uniqlo Singapore: item basic":"",
+"Cotton On dan Typo":"",
+"Aksesori dan scrunchie":"",
+"Irvins Salted Egg Fish Skin":"",
+"Irvins Salted Egg Potato Chips":"",
+"Bengawan Solo: kue pandan dan pineapple tart":"",
+"Kaya jam Ya Kun":"",
+"Bacha Coffee":"",
+"TWG Tea":"",
+"Kit Kat dan mochi varian Jepang":"",
+"Cokelat dan kurma":""
+};
+var EMO={Skincare:"\uD83E\uDDF4",Fashion:"\uD83D\uDC5C",Camilan:"\uD83C\uDF6A"};
+function thumb(p){
+ var s=IMG[p[1]];
+ if(s)return '<img class="th" src="'+s+'" alt="'+p[1]+'" loading="lazy">';
+ return '<span class="th" aria-hidden="true">'+EMO[p[0]]+'</span>';
+}
+var sel={},filter="all";
+var list=document.getElementById("list");
+function render(){
+ var cats=["Skincare","Fashion","Camilan"],h="";
+ cats.forEach(function(c){
+  if(filter!=="all"&&filter!==c)return;
+  h+='<section class="group"><h2>'+c+'</h2>';
+  P.forEach(function(p,i){
+   if(p[0]!==c)return;
+   h+='<div class="item"><label><input type="checkbox" data-i="'+i+'"'+(sel[i]?' checked':'')+' aria-label="Pilih '+p[1]+'">'+thumb(p)+'<span class="n">'+p[1]+'</span><span class="p">Harga menyusul</span><span class="s">'+p[2]+'</span></label></div>';
+  });
+  h+='</section>';
+ });
+ list.innerHTML=h;
+}
+function upd(){
+ var n=Object.keys(sel).filter(function(k){return sel[k]}).length;
+ document.getElementById("count").textContent=n+" barang dipilih";
+ document.getElementById("open").disabled=n===0;
+}
+list.addEventListener("change",function(e){
+ var i=e.target.getAttribute("data-i");
+ if(i===null)return;
+ sel[i]=e.target.checked;upd();
+});
+document.querySelectorAll(".chip").forEach(function(b){
+ b.addEventListener("click",function(){
+  filter=b.getAttribute("data-f");
+  document.querySelectorAll(".chip").forEach(function(x){x.setAttribute("aria-pressed",x===b?"true":"false")});
+  render();
+ });
+});
+var dlg=document.getElementById("dlg"),out=document.getElementById("out"),msg=document.getElementById("msg");
+document.getElementById("open").addEventListener("click",function(){
+ var t="Halo, aku mau order jastip Singapore:\n\n";
+ var c=1;
+ P.forEach(function(p,i){if(sel[i]){t+=c+". "+p[1]+" (varian/warna/ukuran: ... ; jumlah: 1)\n";c++}});
+ t+="\nNama:\nKota:";
+ out.value=t;msg.textContent="Lengkapi varian, warna, dan ukuran, lalu kirim lewat WhatsApp.";
+ document.getElementById("wa").href="https://wa.me/62895336019120?text="+encodeURIComponent(t);
+ if(dlg.showModal)dlg.showModal();else dlg.setAttribute("open","");
+});
+document.getElementById("close").addEventListener("click",function(){dlg.close?dlg.close():dlg.removeAttribute("open")});
+document.getElementById("copy").addEventListener("click",function(){
+ out.select();
+ var done=false;
+ try{done=document.execCommand("copy")}catch(e){}
+ msg.textContent=done?"Tersalin. Tempel di WhatsApp ya.":"Tekan lama teks di atas lalu pilih salin.";
+});
+render();upd();
+</script>
+</body>
+</html>
